@@ -30,9 +30,10 @@ data "aws_iam_policy_document" "s3" {
 }
 
 resource "aws_s3_bucket" "s3" {
-  bucket = "${random_id.s3.hex}"
-  acl    = "public-read"
-  policy = "${data.aws_iam_policy_document.s3.json}"
+  bucket        = "${random_id.s3.hex}"
+  acl           = "public-read"
+  policy        = "${data.aws_iam_policy_document.s3.json}"
+  force_destroy = true
 
   website {
     index_document = "${var.s3_config["index"]}"
