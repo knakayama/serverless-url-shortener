@@ -1,0 +1,8 @@
+*.template
+.terraform
+*tfstate*
+*.tfvars
+functions/serverless_url_shortener_node
+infrastructure/modules/s3/sources/admin/*
+!infrastructure/modules/s3/sources/admin/.gitkeep
+test.json

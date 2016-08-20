@@ -1,0 +1,13 @@
+{
+  "name": "serverless-url-shortener",
+  "description": "serverless url shortener",
+  "nameTemplate": "{{.Function.Name}}",
+  "memory": 128,
+  "timeout": 10,
+  "runtime": "python",
+  "defaultEnvironment": "prod",
+  "environment": {
+    "S3Bucket": "23b34e3c1517578a",
+    "S3Prefix": "u"
+  }
+}
