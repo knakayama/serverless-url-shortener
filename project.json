@@ -7,7 +7,7 @@
   "runtime": "python",
   "defaultEnvironment": "prod",
   "environment": {
-    "S3Bucket": "23b34e3c1517578a",
+    "S3Bucket": "_YOUR_BUCKET_",
     "S3Prefix": "u"
   }
 }
