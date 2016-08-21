@@ -38,16 +38,6 @@ resource "aws_s3_bucket" "s3" {
   website {
     index_document = "${var.s3_config["index"]}"
   }
-
-  lifecycle_rule {
-    id      = "DisposeShortUrls"
-    prefix  = "u"
-    enabled = true
-
-    expiration {
-      days = "${var.s3_config["expiration"]}"
-    }
-  }
 }
 
 resource "aws_s3_bucket_object" "s3" {

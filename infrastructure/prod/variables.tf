@@ -8,8 +8,7 @@ variable "name" {
 
 variable "s3_config" {
   default = {
-    index      = "index.html"
-    expiration = 7
+    index = "index.html"
   }
 }
 
