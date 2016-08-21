@@ -1,7 +1,6 @@
 from __future__ import print_function
 from urlparse import urlparse
 import os
-import json
 import boto3
 import random
 import string
