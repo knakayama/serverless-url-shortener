@@ -15,6 +15,8 @@ $ apex infra apply \
   -target=module.iam \
   -var apex_function_serverless_url_shortener=aaa
 $ apex deploy serverless_url_shortener
-$ apex infra plan \
+$ apex infra apply \
   -var-file=secret.tfvars
+$ apex deploy serverless_url_shortener \
+  --set S3Bucket=<_YOUR_BUCKET>
 ```

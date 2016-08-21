@@ -37,7 +37,7 @@ def check_and_create_s3_redirect(s3_bucket, key_short, url_long, cdn_prefix, id_
                     ContentType="text/plan"
                     )
             except Exception as e:
-                return done(url_long, "", e["Error"]["Message"])
+                return done(url_long, "", e.response["Error"]["Message"])
             else:
                 ret_url = "https://" + cdn_prefix + "/" + id_short
                 print("Success, short_url = {}".format(ret_url))
